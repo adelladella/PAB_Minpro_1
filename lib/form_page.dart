@@ -16,7 +16,7 @@ class _FormPageState extends State<FormPage> {
   final TextEditingController namaController = TextEditingController();
   final TextEditingController hargaController = TextEditingController();
 
-  String kondisi = "Bekas Ringan";
+  String kondisi = "Grade A (Mint)";
   String kategori = "Tas";
 
   File? selectedImage;
@@ -140,7 +140,11 @@ class _FormPageState extends State<FormPage> {
             const SizedBox(height: 6),
             buildDropdown(
               value: kondisi,
-              items: const ["Bekas Ringan", "Bekas", "Like New"],
+              items: const [
+                "Grade A (Mint)",
+                "Grade B (VGC)",
+                "Grade C (Fair)",
+              ],
               onChanged: (value) {
                 setState(() {
                   kondisi = value!;
