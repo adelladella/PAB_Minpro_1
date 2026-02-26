@@ -8,7 +8,7 @@
 
 ###### Kelas: A, Sistem Informasi 2024
 
-<img width="3780" height="1890" alt="fix pab (1)" src="https://github.com/user-attachments/assets/f74cc5a8-387d-4a65-9203-a8125c91579c" />
+<img width="3780" height="1890" alt="fix pab (1)" src="https://github.com/user-attachments/assets/8be7f876-2014-422c-a655-00ab4133bbd3" />
 
 # All About PreLove Notes:
 
@@ -441,9 +441,156 @@ FormPage → Kembali ke HomePage setelah Simpan/Update
 
 </details>
 
-# Tampilan Keseluruhan Aplikasi
+# Tampilan Keseluruhan Aplikasi dan Alur Penggunaan Aplikasi
 
 <details>
 <summary> Click Here </summary>
+
+Berikut adalah alur penggunaan aplikasi PreLove Notes dari awal hingga akhir:
+
+---
+
+### 1. Tampilan Awal Aplikasi
+
+Saat aplikasi pertama kali dibuka, pengguna akan langsung diarahkan ke HomePage.
+
+Jika belum ada data yang ditambahkan, maka halaman akan terlihat kosong (belum ada daftar barang yang tampil).  
+Namun seluruh elemen utama tetap terlihat, seperti:
+
+- Nama aplikasi di bagian atas (PreLove Notes)
+- Welcome section
+- Kalimat sapaan
+- Filter kategori
+- Tombol tambah (+) di bagian kanan bawah
+
+<img height="500" alt="iPhone-13-PRO-localhost" src="https://github.com/user-attachments/assets/e8ed20b0-3daa-4b88-8405-1196550f9b40" />
+
+Hal ini menunjukkan bahwa aplikasi sudah siap digunakan untuk mulai menambahkan data.
+
+---
+
+### 2. Menambahkan Barang (Create)
+
+Untuk menambahkan barang baru, pengguna menekan tombol (+) di kanan bawah.
+
+<img width="434" height="101" alt="Screenshot 2026-02-26 144245" src="https://github.com/user-attachments/assets/93b8e158-588c-4056-b5b1-a8d3872d2a99" />
+
+Setelah ditekan, aplikasi akan berpindah ke halaman FormPage untuk mengisi data barang.
+
+---
+
+### 3. Mengisi Data Barang
+
+Di halaman FormPage, pengguna diminta mengisi beberapa data:
+
+<img height="500" alt="iPhone-13-PRO-localhost (1)" src="https://github.com/user-attachments/assets/10f52d6a-c7bf-4b58-9546-df01223449d5" />
+
+- Upload Foto (opsional / rancangan awal)
+- Nama Barang
+- Harga Jual
+- Grade Barang (Grade A, B, atau C)
+- Kategori (Tas, Atasan, Bawahan, Sepatu, Aksesoris)
+
+Jika pengguna mencoba menekan tombol Simpan tanpa mengisi Nama Barang atau Harga Jual, maka sistem akan menampilkan notifikasi di bagian bawah layar (SnackBar) dengan pesan:
+
+"Isi semua data dulu"
+
+<img height="500" alt="iPhone-13-PRO-localhost (2)" src="https://github.com/user-attachments/assets/a7b83009-8f21-46ed-bbbc-8c46a831b9e4" />
+
+Hal ini bertujuan untuk mencegah data kosong dan menjaga konsistensi informasi yang disimpan.
+
+---
+
+### 4. Menyimpan Data
+
+Jika semua data sudah diisi dengan benar dan tombol Simpan ditekan:
+
+<img height="500" alt="iPhone-13-PRO-localhost (3)" src="https://github.com/user-attachments/assets/c4a246f9-f0c2-4041-9685-3c2aa9ddc17e" />
+
+- Data akan dikirim kembali ke HomePage
+- Data ditambahkan ke dalam list barang
+- Aplikasi otomatis kembali ke HomePage
+- Barang langsung muncul dalam daftar
+
+Harga akan otomatis diformat menjadi Rupiah (contoh: Rp 85.000).
+
+<img height="500" alt="iPhone-13-PRO-localhost (4)" src="https://github.com/user-attachments/assets/26c9ca10-e540-4a32-8dab-5ed853cc0cf8" />
+
+Status awal barang akan ditampilkan sebagai:
+Available
+
+---
+
+### 5. Melihat dan Memfilter Data
+
+Setelah data ditambahkan, pengguna dapat:
+
+<img height="500" alt="iPhone-13-PRO-localhost (5)" src="https://github.com/user-attachments/assets/0728874f-6056-4644-9866-3b82418762f2" />
+
+- Melihat seluruh data pada kategori "Semua"
+- Memilih kategori tertentu untuk menyaring barang
+- Data akan otomatis menyesuaikan berdasarkan kategori yang dipilih
+
+Jika memilih "Semua", maka seluruh barang akan tampil tanpa penyaringan.
+
+<img height="500" alt="iPhone-13-PRO-localhost (8)" src="https://github.com/user-attachments/assets/4727e6cb-dc86-4d73-a119-f9ff35753420" />
+
+---
+
+### 6. Mengubah Status Available / SOLD
+
+Pengguna dapat menekan (tap) pada card barang.
+
+Saat ditekan:
+- Status akan berubah dari Available menjadi SOLD
+- Sistem otomatis mencatat tanggal perubahan status
+- Jika ditekan kembali, status akan kembali menjadi Available
+
+Barang yang masih Available: 
+
+<img height="500" alt="iPhone-13-PRO-localhost (4)" src="https://github.com/user-attachments/assets/07c93bc8-e06d-4fbe-9354-8b7cf105bc54" />
+
+Barang yang sudah Sold: 
+
+<img height="500" alt="iPhone-13-PRO-localhost (5)" src="https://github.com/user-attachments/assets/ab4f404d-9791-4572-bc95-979ecbff525b" />
+
+Fitur ini memudahkan pengguna dalam mengelola barang yang sudah terjual.
+
+---
+
+### 7. Mengedit Data (Update)
+
+Jika pengguna ingin mengubah data barang:
+
+- Tekan icon pencil (edit) pada card
+- FormPage akan terbuka dalam mode Edit
+- Seluruh data sebelumnya otomatis terisi
+- Tombol berubah dari "Simpan" menjadi "Update"
+  
+<img height="500" alt="iPhone-13-PRO-localhost (6)" src="https://github.com/user-attachments/assets/4f5ce95d-c6b7-4cdb-885d-cd8c3cd6a184" />
+
+Setelah tombol Update ditekan:
+- Data lama akan diperbarui
+- Tampilan di HomePage langsung menyesuaikan perubahan
+
+---
+
+### 8. Menghapus Data (Delete)
+
+Jika pengguna ingin menghapus barang:
+
+- Tekan icon delete pada card
+- Barang akan langsung terhapus dari daftar
+- Tampilan diperbarui secara otomatis
+
+---
+
+### 9. Selesai Mengelola Data
+
+Setelah proses tambah, edit, ubah status, atau hapus selesai, pengguna dapat terus mengelola barang sesuai kebutuhan.
+
+Aplikasi akan selalu memperbarui tampilan secara langsung setiap kali terjadi perubahan data.
+
+---
 
 </details>
